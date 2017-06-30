@@ -1,0 +1,53 @@
+{
+  "_type": "Model",
+  "nodes": [
+  {
+    "_type": "InputNode<double>",
+    "id":     "1066",
+    "size": 3
+  }, 
+  {
+    "_type": "ForestPredictorNode<SingleElementThresholdPredictor,ConstantPredictor>",
+    "id":     "1067",
+    "input": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1067",
+      "name": "input",
+      "type": 2,
+      "input":       "1066.output"
+    },
+    "forest": {
+      "_type": "ForestPredictor<SingleElementThresholdPredictor,ConstantPredictor>",
+      "interiorNodes": [
+      {
+        "_type": "InteriorNode",
+        "splitRule": {
+          "_type": "SingleElementThresholdPredictor",
+          "index": 0,
+          "threshold": 0
+        },
+        "outgoingEdges": [
+        {
+          "_type": "Edge",
+          "predictor": {
+            "_type": "ConstantPredictor",
+            "value": -1
+          },
+          "targetNodeIndex": 0
+        }, 
+        {
+          "_type": "Edge",
+          "predictor": {
+            "_type": "ConstantPredictor",
+            "value": 1
+          },
+          "targetNodeIndex": 0
+        }],
+        "firstEdgeIndex": 0
+      }],
+      "rootIndices": [0],
+      "bias": 0,
+      "numEdges": 2
+    }
+  }]
+}

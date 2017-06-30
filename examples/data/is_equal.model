@@ -1,0 +1,39 @@
+{
+  "_type": "Model",
+  "nodes": [
+  {
+    "_type": "InputNode<double>",
+    "id":     "1010",
+    "size": 2
+  }, 
+  {
+    "_type": "BinaryPredicateNode<double>",
+    "id":     "1011",
+    "input1": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1011",
+      "name": "input1",
+      "type": 2,
+      "input":       "1010.output[0]"
+    },
+    "input2": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1011",
+      "name": "input2",
+      "type": 2,
+      "input":       "1010.output[1]"
+    },
+    "predicate": "equal"
+  }, 
+  {
+    "_type": "OutputNode<bool>",
+    "id":     "1012",
+    "input": {
+      "_type": "InputPort<bool>",
+      "nodeId":       "1012",
+      "name": "input",
+      "type": 6,
+      "input":       "1011.output"
+    }
+  }]
+}

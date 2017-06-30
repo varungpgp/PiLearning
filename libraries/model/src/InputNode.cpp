@@ -1,0 +1,20 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Project:  Embedded Learning Library (ELL)
+//  File:     InputNode.cpp (model)
+//  Authors:  Chuck Jacobs
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "InputNode.h"
+
+namespace ell
+{
+namespace model
+{
+    InputNodeBase::InputNodeBase(OutputPortBase& output)
+        : CompilableNode({}, { &output }), _outputBase(output)
+    {
+    }
+}
+}

@@ -1,0 +1,44 @@
+{
+  "_type": "Model",
+  "nodes": [
+  {
+    "_type": "InputNode<double>",
+    "id":     "1003",
+    "size": 3
+  }, 
+  {
+    "_type": "ConstantNode<double>",
+    "id":     "1004",
+    "values": [2, 2, 2]
+  }, 
+  {
+    "_type": "BinaryOperationNode<double>",
+    "id":     "1005",
+    "input1": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1005",
+      "name": "input1",
+      "type": 2,
+      "input":       "1003.output"
+    },
+    "input2": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1005",
+      "name": "input2",
+      "type": 2,
+      "input":       "1004.output"
+    },
+    "operation": "coordinatewiseMultiply"
+  }, 
+  {
+    "_type": "OutputNode<double>",
+    "id":     "1006",
+    "input": {
+      "_type": "InputPort<double>",
+      "nodeId":       "1006",
+      "name": "input",
+      "type": 2,
+      "input":       "1005.output"
+    }
+  }]
+}
